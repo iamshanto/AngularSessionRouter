@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div class="menu">
+    <a [routerLink]="['']">Home</a>
+    | <a [routerLink]="'/contact'">Contact</a>
+    | <a [routerLink]="['courses']" [queryParams]="{'page': 2, limit:10}">
+        Courses
+    </a>
+</div>
+
+<div class="container row">
+    <router-outlet></router-outlet>
+</div>
+<div class="sidebar row">
+    <router-outlet name="sidebar"></router-outlet>
+</div>
